@@ -660,6 +660,7 @@ header .container .lang svg {
 
 #similarProducts {
   padding-bottom: 70px;
+  max-height: 460px;
 }
 
 #similarProducts .container .similarProducts-head {
@@ -794,6 +795,7 @@ header .container .lang svg {
 
 #viewed {
   padding-bottom: 58px;
+  max-height: 460px;
 }
 
 #viewed .container .viewed-head {
@@ -995,6 +997,7 @@ footer .container .footer-part__form form .wrapper {
 }
 
 footer .container .footer-part__form form .wrapper input {
+  font-family: inherit;
   font-size: 1.5rem;
   width: calc(50% - 12px);
   border: 1px solid #CDD2D4;
@@ -1005,16 +1008,50 @@ footer .container .footer-part__form form .wrapper input {
   outline: none;
 }
 
+footer .container .footer-part__form form .wrapper input::-webkit-input-placeholder {
+  color: #767676;
+}
+
+footer .container .footer-part__form form .wrapper input:-ms-input-placeholder {
+  color: #767676;
+}
+
+footer .container .footer-part__form form .wrapper input::-ms-input-placeholder {
+  color: #767676;
+}
+
+footer .container .footer-part__form form .wrapper input::placeholder {
+  color: #767676;
+}
+
 footer .container .footer-part__form form textarea {
+  font-family: inherit;
   border: 1px solid #CDD2D4;
   border-radius: 20px;
   width: 100%;
+  font-weight: 500;
   height: 112px;
   resize: none;
   padding: 13px 25px;
   margin-bottom: 20px;
   font-size: 1.5rem;
   outline: none;
+}
+
+footer .container .footer-part__form form textarea::-webkit-input-placeholder {
+  color: #767676;
+}
+
+footer .container .footer-part__form form textarea:-ms-input-placeholder {
+  color: #767676;
+}
+
+footer .container .footer-part__form form textarea::-ms-input-placeholder {
+  color: #767676;
+}
+
+footer .container .footer-part__form form textarea::placeholder {
+  color: #767676;
 }
 
 footer .container .footer-part__form form button {
