@@ -1,0 +1,991 @@
+$main-dark: #282323
+$submain-dark: #767676
+*
+    box-sizing: border-box
+html
+    font-family: 'Avenir'
+    font-size: 10px   
+    color: $main-dark
+
+
+.container
+    width: 95%
+    max-width: 1180px
+    margin: 0 auto
+.dpn
+    display: none
+.dpb
+    display: block!important
+.dpfl
+    display: flex!important
+.menu-anim
+    animation: menu-animation .3s
+@keyframes menu-animation
+    from
+        left: -300px
+    to
+        left: 0
+            
+
+
+
+
+
+
+
+
+header
+    color: $main-dark
+    border-bottom: 1px solid #E7E7E7
+    padding: 13px 0 12px 0
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .menu
+            display: flex
+            font-size: 1.5rem
+            align-items: center
+            margin-left: -10px
+            margin-top: -3px
+            .burger
+                margin-right: 14px
+                &-text
+                    font-size: 1.4rem
+                    display: none
+            &-list
+                display: flex
+                &__item
+                    margin-right: 40px
+                    text-decoration: none
+                    color: $main-dark
+                    &:last-child
+                        margin-right: 0
+        .wrapper
+            display: flex
+            align-items: center
+            .search-bar
+                margin-right: 60px
+                position: relative
+                &__button, &__input 
+                    outline: none
+                    border: none
+                    background: transparent
+                &__input
+                    display: block
+                    border: 1px solid #CDD2D4
+                    border-radius: 40px
+                    width: 395px
+                    line-height: 44px
+                    padding: 0 20px 0 60px
+                    font-size: 1.5rem
+                &__input::placeholder
+                    color: $submain-dark
+                &__button
+                    position: absolute
+                    left: 19px
+                    top: 12px
+            .fav
+                position: relative
+                a
+                    text-decoration: none
+                    display: block
+                    .fav-counter
+                        position: absolute
+                        top: -13px
+                        right: -11px
+                        font-size: 1.4rem
+                        color: #ffffff
+                        font-weight: 700
+                        background: #D40028
+                        border: 2px solid #FFFFFF
+                        width: 24px
+                        line-height: 20px
+                        border-radius: 24px
+                        text-align: center
+        .social-links
+            display: flex
+            align-items: center
+            &__item
+                text-decoration: none
+                img
+                    display: block
+                    max-width: 100%
+                &:first-child
+                    margin-right: 36px
+        .lang
+            display: flex
+            align-items: center
+            &-current
+                font-size: 1.5rem
+                margin-right: 10px
+            svg
+                display: block
+                margin-top: 3px
+
+
+
+#breadcrumbs
+    padding: 33px 0 40px 0
+    .container
+        .breadcrumbs-list
+            display: flex
+            align-items: center
+            &__item
+                font-size: 1.5rem
+                color: $submain-dark
+                margin-right: 26px
+                position: relative
+                &::before
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 8px
+                    position: absolute
+                    top: 50%
+                    right: -16px
+                    transform: translateY(-50%)
+                    background: url(../img/bread-arrow.png)
+                &:last-child
+                    color: $main-dark
+                    &::before
+                        display: none
+
+#card
+    .splide__arrow
+        display: none!important
+    .splide__arrow--next
+        display: block!important
+        width: 80px
+        height: 40px
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 100%, #FFFFFF 100%)
+        border: none
+        position: absolute
+        bottom: 0
+        z-index: 12
+        background-repeat: no-repeat
+        left: 0
+.slick-slide
+    outline: none
+#card
+    font-size: 1.5rem
+    padding-bottom: 113px
+    .container
+        .head
+            display: flex
+            justify-content: space-between
+            padding-bottom: 62px
+            .left
+                display: flex
+                margin-right: 15px
+                .sideSlider
+                    margin-right: 20px
+                    max-width: 80px
+                    &-wrapper
+                        position: relative
+                        .sidenext
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            position: absolute
+                            left: 0
+                            bottom: -30px
+                            width: 100%
+                            height: 120px
+                            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 57.65%)
+                        .sideSlider__item
+                            width: 80px
+                            height: 80px
+                            background: #EFEFEF
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            margin-bottom: 10px
+                            img
+                                display: block
+                .mainSlider
+                    max-width: 480px
+                    &-wrapper
+                        .mainSlider__item
+                            max-width: 480px
+                            height: 480px
+                            background: #EFEFEF
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            img
+                                display: block
+                                max-width: 100%
+            .right
+                .vendorCode
+                    display: flex
+                    align-items: center
+                    margin-bottom: 12px
+                    .new
+                        width: fit-content
+                        font-size: 1.3rem
+                        line-height: 25px
+                        padding: 0 10px
+                        background: #43AA39
+                        font-weight: 800
+                        color: #ffffff
+                        border-radius: 40px
+                        margin-right: 16px
+                    .code
+                        color: $submain-dark
+                        span
+                            color: $main-dark
+                .product-title
+                    font-weight: 600
+                    font-size: 26px
+                    line-height: 36px
+                    color: $main-dark
+                    max-width: 520px
+                    margin-bottom: 22px
+                .stock
+                    display: flex
+                    align-items: center
+                    margin-bottom: 30px
+                    &-text
+                        color: $submain-dark
+                        margin-right: 19px
+                    &-percent
+                        width: fit-content
+                        border-radius: 20px
+                        font-size: 2rem
+                        color: #D40028
+                        line-height: 36px
+                        padding: 0 16px
+                        background: #EFEFEF
+                        margin-right: 21px
+                    &-time
+                .btns
+                    display: flex
+                    align-items: center
+                    margin-bottom: 30px
+                    justify-content: space-between
+                    &__item
+                        line-height: 44px
+                        border-radius: 40px
+                        width: fit-content
+                        padding: 0 28px
+                        // margin-right: 20px
+                        cursor: pointer
+                    &__buy
+                        color: #ffffff
+                        background: #D40028
+                    &__gde
+                        line-height: 42px
+                        border: 1px solid #CDD2D4
+                        padding: 0 31px
+                    &__gdesec
+                        background: #EFEFEF
+                        margin-right: 0
+                .description
+                    &__text
+                        line-height: 22px
+                        max-width: 540px
+                        margin-bottom: 22px
+                        font-weight: 500
+                        &:last-child
+                            margin-bottom: 0
+        .body
+            display: flex
+            justify-content: space-between
+            .left
+                margin-right: 35px
+                .tabs
+                    display: flex
+                    align-items: center
+                    margin-bottom: 35px
+                    line-height: 44px
+                    &__item
+                        cursor: pointer
+                        color: $submain-dark
+                        margin-right: 35px
+                        width: fit-content
+                        font-weight: 500
+                        &:last-child
+                            margin-right: 0
+                    .active
+                        color: #D40028
+                        border-bottom: 2px solid #D40028    
+                .specs
+                    &__active
+                        display: block!important
+                    &__item
+                        max-width: 555px
+                        display: none
+                        p
+                            margin-bottom: 22px
+                            line-height: 22px
+                            font-weight: 500
+                            &:last-child
+                                margin-bottom: 0
+                    .specs__char
+                        display: none
+                    .specs__arde
+                        display: none
+            .right
+                .reviews-head  
+                    display: flex
+                    align-items: center 
+                    justify-content: space-between
+                    margin-bottom: 37px
+                    &__count
+                        font-size: 1.8rem
+                        display: flex
+                        p
+                            margin-right: 7px
+                        span
+                            color: $submain-dark
+                    &__write
+                        width: fit-content
+                        border: 1px solid #CDD2D4
+                        border-radius: 40px
+                        line-height: 42px
+                        padding: 0 21px
+                .reviews-body
+                    &-wrapper
+                        margin-bottom: 18px
+                        .reviews-body__item
+                            border: 1px solid #CDD2D4
+                            border-radius: 10px
+                            padding: 22px 24px 27px 23px
+                            width: 540px
+                            margin-bottom: 10px
+                            &-head
+                                display: flex
+                                align-items: center
+                                justify-content: space-between
+                                margin-bottom: 17px
+                                .name
+                                    font-weight: 700
+                                    font-size: 1.5rem
+                                .date
+                                    font-size: 1.3rem
+                                    color: $submain-dark
+                            &-body
+                                .text
+                                    padding-right: 10px
+                                    line-height: 22px
+                .reviews-footer
+                    a
+                        text-decoration: none
+                        color: $submain-dark
+                        font-weight: 500
+                        span
+                            font-weight: 800
+
+
+
+
+
+#similarProducts
+    padding-bottom: 70px
+    .container
+        .similarProducts-head
+            display: flex
+            align-items: center
+            margin-bottom: 35px
+            .title
+                font-weight: 700
+                font-size: 2.6rem
+                margin-right: 74px
+            .switch
+                font-size: 1.5rem
+                display: flex
+                align-items: center
+                &__item
+                    color: $submain-dark
+                    cursor: pointer
+                    margin-right: 26px
+                    &:last-child
+                        margin-right: 0
+                &__item-active
+                    color: #D40028
+        .similarProducts-body
+                position: relative
+                .simarrow
+                    position: absolute
+                    top: -40px
+                    right: 10px
+                    background: transparent
+                    border: none
+                    outline: none
+                .simprev
+                    right: 40px
+
+.subSlider
+    &-wrapper
+        display: flex
+        justify-content: space-between
+        margin-right: -20px
+        &__item
+            padding: 5px
+            .head
+                background: #EFEFEF
+                // width: 280px
+                height: 260px
+                display: flex
+                align-items: center
+                justify-content: center
+                position: relative
+                margin-bottom: 16px
+                img
+                    max-width: 100%
+                    display: block
+                .addToFavourites
+                    cursor: pointer
+                    position: absolute
+                    top: 10px
+                    right: 10px
+                    background: #ffffff
+                    width: 28px
+                    height: 28px
+                    border-radius: 28px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    svg
+                        stroke: #767676
+                    &:hover
+                        svg
+                            fill: #D40028
+                            stroke: #D40028
+            .body
+                .text
+                    display: block
+                    font-size: 1.5rem
+                    line-height: 22px
+                    max-width: 270px
+                    text-decoration: none
+                    color: $main-dark
+
+#viewed
+    padding-bottom: 58px
+    .container
+        .viewed-head
+            margin-bottom: 40px
+            &__title
+                font-size: 2.6rem
+                font-weight: 700
+        .viewed-body
+            position: relative
+            .viewedarrows 
+                position: absolute
+                top: -40px
+                right: 10px
+                background: transparent
+                border: none
+                outline: none
+            .viewedprev
+                right: 40px
+
+#subscribe
+    background: #FBBF2B
+    padding: 83px 0
+    position: relative
+    .dish
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 10
+        .mobile
+            display: none
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        z-index: 11
+        .subscribe-left
+            color: #ffffff
+            &__title
+                font-size: 5.6rem
+                font-weight: 700
+                margin-bottom: 22px
+            &__text
+                font-size: 20px 
+                line-height: 27px
+                max-width: 427px
+        .subscribe-right
+            form
+                display: flex
+                input, button
+                    border: none
+                    outline: none
+                    display: block
+                    line-height: 50px
+                    font-size: 1.5rem
+                input
+                    border-radius: 40px 0px 0px 40px
+                    padding: 0 30px 0 30px 
+                    width: 382px
+                button
+                    background: #E11E24
+                    border-radius: 0px 40px 40px 0px
+                    width: 146px
+                    color: #ffffff
+                    font-weight: 700
+
+#items
+    padding: 26px 0
+    background: #EFEFEF
+    .container
+        .items-list
+            display: flex
+            justify-content: space-between
+            align-items: center
+            &__item
+                display: flex
+                align-items: center
+                svg
+                    margin-right: 20px
+                p
+                    font-size: 1.5rem
+
+footer
+    padding: 64px 0 35px 0
+    .container
+        display: flex
+        justify-content: space-between
+        .footer-part
+            &__title
+                font-size: 1.8rem
+                font-weight: 700
+                margin-bottom: 41px
+                color: $main-dark
+                .dash
+                    display: none
+                .mobarrow
+                    display: none
+            &__list
+                .item
+                    color: $submain-dark
+                    margin-bottom: 22px
+                    font-size: 1.5rem
+            &__adressList
+                .item
+                    margin-bottom: 20px
+                    p
+                        font-size: 1.5rem
+                        font-weight: 700
+                        color: $main-dark
+                        margin-bottom: 10px
+                    span
+                        display: block
+                        font-size: 1.5rem
+                        color: $submain-dark
+                    &:last-child
+                        margin-bottom: 0
+            &__form
+                max-width: 380px
+                form
+                    .wrapper
+                        margin-bottom: 10px
+                        input
+                            font-size: 1.5rem
+                            width: calc(50% - 12px)
+                            border: 1px solid #CDD2D4
+                            border-radius: 40px
+                            padding: 0 10px 0 25px
+                            line-height: 42px
+                            margin-right: 10px
+                            outline: none
+                    textarea
+                        border: 1px solid #CDD2D4
+                        border-radius: 20px
+                        width: 100%
+                        height: 112px
+                        resize: none
+                        padding: 13px 25px 
+                        margin-bottom: 20px
+                        font-size: 1.5rem
+                        outline: none
+                    button
+                        outline: none
+                        border: none
+                        width: 100%
+                        line-height: 44px
+                        font-size: 1.5rem
+                        font-weight: 700
+                        background: #D40028
+                        border-radius: 40px
+                        color: #ffffff
+
+#confidentiality
+    border-top: 1px solid #E7E7E7
+    padding: 0 35px 26px  35px
+    .container
+        .confidentiality
+            width: 100%
+            padding-top: 26px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .wrapper
+                display: flex
+                align-items: center
+                a
+                    color: $submain-dark
+                    text-decoration: none
+                    font-size: 1.5rem
+                .conf
+                    margin-right: 68px
+                .download   
+                    margin-right: 60px
+                .social
+                    a
+                        &:first-child
+                            margin-right: 32px
+
+
+
+@media screen and ( max-width: 1160px )
+    header .container .wrapper .search-bar
+        margin-right: 30px
+    #card .container .head .right .btns__gdesec
+        display: none
+    
+@media screen and ( max-width: 1000px )
+    #card .container .head .left .sideSlider-wrapper .sidenext
+        width: 80px
+        height: 100%
+        bottom: 0
+        left: inherit
+        right: 0
+        transform: rotate(-90deg)
+    #confidentiality 
+        .container 
+            .confidentiality
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                .wrapper
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    .conf
+                        margin: 0
+                        margin-bottom: 20px
+                    .coockie
+                        margin-bottom: 20px
+                    .download
+                        margin: 0
+                        margin-bottom: 40px
+    footer 
+        .container
+            flex-wrap: wrap
+            .footer-part
+                width: 50%
+                margin-bottom: 30px
+    #items
+        .container
+            .items-list
+                flex-wrap: wrap
+                &__item
+                    width: 50%
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    margin-bottom: 31px
+                    svg
+                        display: block
+                        margin-bottom: 13px
+                        margin-right: 0
+    .subSlider-wrapper
+        margin-right: 0
+    #subscribe
+        text-align: center
+        .container
+            flex-direction: column
+            .subscribe-left
+                margin-bottom: 20px
+            .subscribe-right
+                width: 100%
+                max-width: 600px
+                form
+                    width: 100%
+                    flex-direction: column
+                    align-items: center
+                    input
+                        width: 100%
+                        border-radius: 40px
+                        margin-bottom: 20px
+                    button
+                        width: 50%
+                        border-radius: 40px
+        .dish
+            top: inherit
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            img
+                display: none
+    #similarProducts .container .similarProducts-head
+        flex-direction: column
+        align-items: flex-start
+        .title
+            margin-bottom: 20px
+    header 
+        padding: 12px 15px
+        .container 
+            .logo
+                order: 2
+            .social-links
+                display: none
+            .lang
+                display: none
+            .menu
+                order: 1
+                position: relative
+                .burger
+                    display: flex
+                    svg
+                        margin-right: 9px
+                    &-text
+                        display: block
+                &-list
+                    display: none
+                    position: absolute
+                    left: 0
+                    top: 20px
+                    background: #EFEFEF
+                    flex-direction: column
+                    align-items: flex-start
+                    justify-content: center
+                    padding: 10px 20px 0 20px
+                    z-index: 13
+                    white-space: nowrap
+                    &__item
+                        margin: 0
+                        margin-bottom: 20px
+            .wrapper
+                order: 3
+                .search-bar
+                    &__button
+                        position: static
+                    &__input
+                        display: none
+    #breadcrumbs 
+        .container 
+            .breadcrumbs-list
+                &__item
+                    font-size: 1.3rem
+                    display: none
+                    &:first-child
+                        display: block!important
+                    &:nth-child(2)
+                        display: block!important
+                        &::before
+                            display: none
+    
+    #card 
+        overflow: hidden
+        .container 
+            position: relative
+            .head
+                flex-direction: column
+                .left
+                    flex-direction: column
+                    margin-right: 0
+                    padding-top: 120px
+                    .sideSlider
+                        order: 2
+                        max-width: 100%
+                        margin-top: 20px
+                        margin-right: 0
+                        margin-bottom: 30px
+                        &-wrapper
+                            .sideSlider__item
+                                margin: 0 5px
+                                padding: 0 10px
+                    .mainSlider
+                        max-width: 100%
+                        &-wrapper
+                            .mainSlider__item
+                                max-width: 100%
+                .right
+                    .vendorCode
+                        position: absolute
+                        top: 0
+                        left: 0
+                    .product-title
+                        position: absolute
+                        top: 40px
+                        left: 0
+                        max-width: 100%
+                    .btns
+                        justify-content: center
+                        .btns__buy
+                            margin-right: 20px
+                    .description
+                        &__text
+                            max-width: 100%
+                    .stock
+                        width: fit-content
+                        margin: 0 auto
+                        margin-bottom: 30px
+            .body
+                flex-direction: column
+                .left
+                    margin-right: 0
+                    margin-bottom: 30px
+                    .tabs
+                        overflow: auto
+                        display: block
+                        white-space: nowrap
+                        &::-webkit-scrollbar
+                            display: none
+                        &__item
+                            display: inline-block
+                    .specs
+                        &__item
+                            max-width: 100%
+                .right
+                    .reviews-body
+                        &-wrapper
+                            .reviews-body__item
+                                width: 100%
+
+@media screen and ( max-width: 700px )
+    #viewed .container .viewed-body 
+        .viewedarrows
+            z-index: 12
+            top: 50%
+            right: inherit
+            left: -10px
+            transform: translateY(calc( -50% - 30px))
+            background: #FFFFFF
+            opacity: 0.7
+            width: 32px
+            height: 32px    
+            border-radius: 32px
+            display: flex
+            justify-content: center
+            align-items: center
+        .viewednext
+            left: inherit
+            right: -10px
+    #similarProducts .container .similarProducts-body 
+        .simarrow
+            z-index: 12
+            top: 50%
+            right: inherit
+            left: -10px
+            transform: translateY(calc( -50% - 30px))
+            background: #FFFFFF
+            opacity: 0.7
+            width: 32px
+            height: 32px    
+            border-radius: 32px
+            display: flex
+            justify-content: center
+            align-items: center
+        .simnext
+            left: inherit
+            right: -10px
+
+@keyframes footanim
+    from
+        top: -2000
+    to
+        top: 0
+        
+.footAnimation
+    animation: footanim .3s
+
+@media screen and ( max-width: 760px )
+    footer 
+        overflow: hidden
+        .container 
+            .footer-part
+                width: 100%
+                margin-bottom: 0
+                &__title
+                    margin-bottom: 30px
+                    margin-top: 10px
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    cursor: pointer
+                    p
+                        padding-right: 14px
+                        white-space: nowrap
+                        font-size: 1.6rem
+                    .dash
+                        display: block
+                        width: 100%
+                        height: 0
+                        border: 1px dashed #C4C4C4
+                    .mobarrow
+                        padding-left: 14px
+                        display: block
+                &__list
+                    display: none
+                    position: relative
+                    top: 0
+                &__adressList
+                    position: relative
+                    top: 0
+                    display: none
+                &__form
+                    max-width: 100%
+                    form
+                        .wrapper
+                            input
+                                display: block
+                                width: 100%
+                                margin-bottom: 10px
+
+
+@media screen and ( max-width: 500px )
+    #card .container .head .left .mainSlider-wrapper .mainSlider__item
+        height: 320px
+    #subscribe
+        padding-bottom: 144px 
+        .container .subscribe-left
+            &__title
+                font-size: 3rem
+            &__text
+                font-size: 16px
+    .dish
+        width: 100%
+        .mobile
+            display: block!important
+            max-width: 100%
+            width: 100%
+    #card 
+        .container 
+            .head 
+                .left
+                    padding-top: 150px
+                    .mainSlider__item
+                        padding: 10px
+                .right 
+                    .vendorCode
+                        .new
+                            font-size: 1.2rem
+                        .code
+                            font-size: 1.4rem
+                    .description
+                        &__text
+                            font-size: 1.4rem
+                    .btns
+                        &__item
+                            padding: 0 24px
+                        &__buy
+                            margin-right: 10px!important
+                    .product-title
+                        font-size: 2.2rem
+
+@media screen and ( max-width: 400px )
+    #items .container .items-list__item
+        padding: 0 40px
+        text-align: center
+    .subSlider-wrapper__item .head
+        height: 136px
+    .subSlider-wrapper
+        margin-right: 0
